@@ -25,5 +25,8 @@
       "**/backend",
       "**/backend/**"
     ]
+  },
+  "dependencies": {
+    "ethers": "^5.7.2"
   }
 }
