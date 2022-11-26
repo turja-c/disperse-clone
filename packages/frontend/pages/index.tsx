@@ -2,16 +2,8 @@ import Head from 'next/head';
 
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { GetGreeter, SetGreeter } from '../components/contract';
-import { useBalance } from 'wagmi'
-
 
 export default function Home() {
-
-  const { data, isError, isLoading } = useBalance({
-    address: '0x765374f6E28879cC3f75138e008c0f2AB9Dbe1D9',
-  })
- 
-  
   return (
     <div className={''}>
       <Head>
@@ -33,11 +25,8 @@ export default function Home() {
           alignItems: 'center',
         }}
       >
-        {/* <GetGreeter />
-        <SetGreeter /> */}
-        Hello World
-        {data?.formatted} {data?.symbol}
-
+        <GetGreeter />
+        <SetGreeter />
       </main>
     </div>
   );
